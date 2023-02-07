@@ -1,0 +1,64 @@
+
+
+<div class="alyo-padding-10px" >
+<div class="row alyo-bordo-rotondo-20px" style="margin: 0px; padding: 5px" [ngClass]="cac.colorefisso('sfondocontenitore',0)">
+  <div class="col-3" style="margin: 0px; padding: 5px">
+    <select [(ngModel)]="prefisso.valore" class="alyo-padding-10px alyo-bordo-rotondo-10px alyo-bordo-0px alyo-larghezza-100 alyo-altezza-100" [ngClass]="[cac.colorefisso('sfondocontenitore',2),cac.colorefisso('testo',0)]">
+      <option *ngFor="let item of lista_prefissi" [value]="item.id">{{ item.prefisso }} {{ item.nazione }}</option>
+    </select>
+  </div> 
+  <div class="col-6" style="margin: 0px; padding: 5px;">
+    <alyo-input [item]="numero_telefonico" [tipo]="'text'" [classe]="grafica['classe']['generico']" [stile]="grafica['stile']['generico']" [placeholder]="'Inserisci Un Numero Di Whatsapp'"  [ngclasse]="[cac.colorefisso('sfondocontenitore',2),cac.colorefisso('testo',0)]" (inizio)="alyoiput = $event;" (keyup)="keyup()"></alyo-input>
+  </div> 
+
+  <div class="col-3" style="margin: 0px; padding:  5px;">
+    <a target="_blank" style="width: 100%; text-decoration: none;"  [href]="'https://wa.me/'+lista_prefissi[prefisso.valore].prefisso.replace('+', '')+numero_telefonico.valore">
+      <div class="alyo-testo-centro alyo-padding-10px alyo-bordo-rotondo-10px alyo-bordo-0px alyo-larghezza-100" [ngClass]="[cac.colorefisso('sfondocontenitore',2),cac.colorefisso('testo',0)]">Apri</div>
+    </a>
+  </div>
+</div>
+</div>
+
+<div class="alyo-padding-10px" >
+  <div class="alyo-bordo-rotondo-20px" [ngClass]="cac.colorefisso('sfondocontenitore',0)">
+  <div class="alyo-padding-destro-10px alyo-padding-sinistro-10px alyo-padding-sopra-10px alyo-testo-centro" >
+    <p class="alyo-margine-0px" [ngClass]="[cac.colorefisso('testo',0)]">https://wa.me/{{ lista_prefissi[prefisso.valore].prefisso.replace('+', '')}}{{numero_telefonico.valore}}</p>  
+  </div>
+
+  <div class="row" style="margin: 0px; padding: 5px">
+    <div class="col-4" style="margin: 0px; padding: 5px">
+      <button target="_blank" style="width: 100%; text-decoration: none;" class="alyo-bordo-0px alyo-bordo-rotondo-10px alyo-padding-10px" [ngClass]="[cac.colorefisso('sfondocontenitore',2),cac.colorefisso('testo',0)]" (click)="alyoCopy('https://wa.me/'+lista_prefissi[prefisso.valore].prefisso.replace('+', '')+numero_telefonico.valore)">
+        <fa-icon class="alyo-testo-14px " [icon]="fawesome.copia"></fa-icon><br>
+         Copia 
+      </button>
+    </div> 
+
+    <div class="col-4" style="margin: 0px; padding: 5px;">
+      <button target="_blank" style="width: 100%; text-decoration: none;" class="alyo-bordo-0px alyo-bordo-rotondo-10px alyo-padding-10px" [ngClass]="[cac.colorefisso('sfondocontenitore',2),cac.colorefisso('testo',0)]" (click)="condividi()">
+        <fa-icon class="alyo-testo-14px " [icon]="fawesome.condividi"></fa-icon><br>
+        Condividi
+      </button>
+    </div> 
+  
+    <div class="col-4" style="margin: 0px; padding:  5px;">
+      <a target="_blank" [href]="'tel:'+numero_telefonico.valore" style="width: 100%; text-decoration: none;">
+        <div class="alyo-testo-centro alyo-padding-10px alyo-bordo-rotondo-10px alyo-bordo-0px alyo-larghezza-100" [ngClass]="[cac.colorefisso('sfondocontenitore',2),cac.colorefisso('testo',0)]">
+          <fa-icon class="alyo-testo-14px " [icon]="fawesome.telefono"></fa-icon><br>
+          Chiama
+        </div>
+      </a>
+    </div>
+  </div>
+  </div>
+  </div>
+
+
+
+
+
+
+  
+
+
+
+

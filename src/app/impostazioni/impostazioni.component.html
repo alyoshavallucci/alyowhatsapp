@@ -1,0 +1,28 @@
+
+<div class="row" style="padding: 5px; margin: 0px;">
+   <div class="col-sm-6" style="padding: 5px; margin: 0px;">
+      <div [ngClass]="[cac.colorefisso('sfondocontenitore',0),cac.colorefisso('testo',0)]" class=" alyo-altezza-60px alyo-ombra alyo-padding-10px alyo-bordo-rotondo-20px">
+        <h2 class="alyo-posizione-assoluto">Modalita Scura</h2>
+        <div class="alyo-posizione-assoluto" style="right: 10px"><alyo-bottoneswitch [classe]="grafica['switch']" [sfondo]="{true: cac.colorevariabile('sfondocontenitore'), false: 'alyo-bianco-trasparente-50'}" [attivo]="!cac.modalitachiara" (esterno)="bottonemodalitascura = $event;" (evento)="aggiornamento();"></alyo-bottoneswitch></div>
+      </div>
+   </div>
+   <div class="col-sm-6" style="padding: 5px; margin: 0px;">
+    <div [ngClass]="[cac.colorefisso('sfondocontenitore',0),cac.colorefisso('testo',0)]" class=" alyo-ombra alyo-padding-10px alyo-bordo-rotondo-20px">
+      
+      <div class="alyo-padding-10px alyo-bordo-rotondo-10px alyo-margine-sotto-10px" [ngClass]="[cac.colorefisso('sfondocontenitore',2),cac.colorefisso('testo',0)]">
+           <div class="alyo-testo-centro alyo-margine-sotto-10px alyo-margine-0px"><img class="alyo-bordo-rotondo-50 alyo-larghezza-200px alyo-altezza-200px" src="../../assets/profilo/profilo1.JPG"></div>
+           <h3 class="alyo-testo-centro alyo-margine-0px" >👱🏻‍♂️ ᗩլ¥ΘŠĦᗩ ᐺᗩլլᑗ©©Ї</h3>
+      </div>      
+      
+      <div class="alyo-padding-destro-10px alyo-padding-sinistro-10px alyo-padding-sotto-5px">
+          <h4 class="alyo-testo-centro alyo-margine-0px" >Data Di Rilascio</h4>         
+      </div>
+
+      <div class="alyo-padding-10px alyo-bordo-rotondo-10px" [ngClass]="[cac.colorefisso('sfondocontenitore',2),cac.colorefisso('testo',0)]">
+         <h3 class="alyo-testo-centro alyo-margine-0px" >Febbraio 2023</h3>
+      </div>
+        
+    </div>
+   </div>
+</div>
+
